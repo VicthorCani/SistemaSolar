@@ -1,0 +1,77 @@
+body {
+    background: black;
+    margin: 0;
+}
+
+.container {
+    height: 400px;
+    width: 400px;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.sun {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 30px white;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+
+/* Terra */
+.orbit.earth {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    animation: orbit 36.5s linear infinite;
+    transform-origin: center;
+}
+
+.globe.earth {
+    background-color: aqua;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 185px; /* afastamento do centro do sol */
+}
+
+/* Lua */
+.orbit.moon {
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    width: 80px;
+    height: 80px;
+    animation: orbit 2.7s linear infinite;
+    transform-origin: center;
+}
+
+.globe.moon {
+    width: 12px;
+    height: 12px;
+    background: #d6d6d6;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 34px; /* afastamento do centro da Terra */
+}
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
